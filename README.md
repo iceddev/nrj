@@ -22,7 +22,8 @@ var cities_collection = client.collection('cities');
 ```
 
 ### Solr Schema Administration
-You may set an optional Solr indexing schema for a RiakJson collection.
+You may set an optional Solr indexing schema for a RiakJson collection, by specifying which fields it should index, and how.
+
 If you do not set an explicit schema, and start inserting documents into a collection, RiakJson will
 attempt to [infer a schema](https://github.com/basho-labs/riak_json/blob/master/docs/architecture.md#inferred-schemas) based 
 on the document's structure (keep in mind, though, that the derived schema attempts to index *every* field in the document).
